@@ -1,2 +1,11 @@
-# Split-Plot-RCBD
-Analysis of experimental data with R
+## Analysis of experimental data: Split-Plot RCBD
+
+Example of a 2x4 Split-Plot organized in a Randomized Complete Block Design (RCBD) with significant interaction. The data come from the study by Thomson et al. (1981).
+
+Treatments are bacterial inoculation (inoculated versus not inoculated with pathogen *Erwinia carotovora*) and in-row spacing between plants (4, 6, 12 and 18 inches). Bacterial inoculation was assigned to main plots and plant spacing to subplots. The response variable is sugarbeet yield (lb/acre).
+
+Analysis of variance and mean comparison were performed with the R package [agricolae](https://cran.r-project.org/web/packages/agricolae/index.html)
+
+**Reference:** Thomson, S. V., Hills, F. J., Whitney, E. D., & Schroth, M. N. (1981). Sugar and root yield of sugar beets as affected by bacterial vascular necrosis and rot, nitrogen fertilization, and plant spacing. Phytopathology 71:605-608.
+
+![yield](https://github.com/pbrevis/Split-Plot-RCBD/blob/main/Fig/sugarbeet_yields.png)
