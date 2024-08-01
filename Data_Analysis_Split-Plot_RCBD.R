@@ -85,16 +85,46 @@ scatterpl +
   theme_classic()
 
 
+
 ################################################################################
 ## STEP 3: SUMMARY STATISTICS
 ################################################################################
 
-sugarbeet_df2 %>%
-  group_by(inoculation, spacing2) %>%
-  summarise(n = n(),
-           mean = mean(yield),
-           sd = sd(yield)
-           )
+sugarbeet_df3 <- sugarbeet_df2 %>%
+  group_by(spacing2, inoculation) %>%
+  summarise(no = n(),
+            treat_mean = mean(yield),
+            se = sd(yield, na.rm = TRUE)/
+                 sqrt(n()))
+sugarbeet_df3
+
+sugarbeet_df3$grouping <- c("b", "cd", "a", "bc", "a", "d", "a", "e")
+
+# Create a histogram
+
+ggplot(sugarbeet_df3, aes(x= spacing2,
+                          y= treat_mean,
+                          fill= inoculation)) +
+  geom_bar(position= position_dodge(width= 0.9), stat = "identity",
+           col= "black") +
+#  geom_col(position= "dodge", col= "black") +
+  geom_errorbar(aes(ymin= treat_mean - se, ymax= treat_mean + se),
+ #               group = inoculation,
+                position= position_dodge(width=.9),
+                width= 0.2
+                ) +
+  scale_y_continuous(limit=c(0,25)) +
+  scale_fill_brewer(palette = "Set2") +
+  ggtitle("Effect of bacterial vascular necrosis on sugarbeet yield") +
+  xlab("In-row plant spacing (in)") +
+  ylab("Yield (lb/acre)") +
+  labs(fill = "Bacterial\ninoculation") +
+  geom_text(aes(label= grouping, y= treat_mean + se),  # group = inoculation
+            vjust= -.3,
+            size= 5,
+            position = position_dodge(width= 0.9)) +
+  theme_classic()
+
 
 ################################################################################
 ## STEP 4: ANALYSIS OF VARIANCE WITH R PACKAGE AGRICOLAE
