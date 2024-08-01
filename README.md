@@ -8,4 +8,4 @@ Analysis of variance and mean comparison were performed with the R package [agri
 
 **Reference:** Thomson, S. V., Hills, F. J., Whitney, E. D., & Schroth, M. N. (1981). Sugar and root yield of sugar beets as affected by bacterial vascular necrosis and rot, nitrogen fertilization, and plant spacing. Phytopathology 71:605-608.
 
-![yield](https://github.com/pbrevis/Split-Plot-RCBD/blob/main/Fig/sugarbeet_yields.png)
+![plot](https://github.com/pbrevis/Split-Plot-RCBD/blob/main/Fig/Histogram.png)
