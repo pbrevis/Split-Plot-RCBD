@@ -6,6 +6,7 @@ Treatments are bacterial inoculation (inoculated versus not inoculated with path
 
 Analysis of variance and mean comparison were performed with the R package [agricolae](https://cran.r-project.org/web/packages/agricolae/index.html)
 
-**Reference:** Thomson, S. V., Hills, F. J., Whitney, E. D., & Schroth, M. N. (1981). Sugar and root yield of sugar beets as affected by bacterial vascular necrosis and rot, nitrogen fertilization, and plant spacing. Phytopathology 71:605-608.
+**Reference:**  
+Thomson, S. V., Hills, F. J., Whitney, E. D., & Schroth, M. N. (1981). Sugar and root yield of sugar beets as affected by bacterial vascular necrosis and rot, nitrogen fertilization, and plant spacing. Phytopathology 71:605-608.
 
 ![plot](https://github.com/pbrevis/Split-Plot-RCBD/blob/main/Fig/Histogram.png)
